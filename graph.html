@@ -1,3 +1,53 @@
+<html>
+<head>
+<head>
+    <title>D3 DiGraph Test</title>
+    <script type="text/javascript" src="d3.js"></script>
+    <script type="text/javascript" src="d3.geom.js"></script>
+    <script type="text/javascript" src="d3.layout.js"></script>
+    <style type="text/css">
+	
+	body { 
+		padding-top:20px;
+		background:url('http://graus.nu/blog/wp-content/themes/graus2/concrete2.png') fixed;
+		font-family:helvetica,arial;
+		text-shadow:#000 0px 1px 1px;
+		}
+	node { 
+		stroke-width: 1.5px;
+		}
+	.graph {
+		margin:0 auto;
+		width:960px;
+		color:#FFF;
+		border: 1px dashed #333;
+		fill: #000;
+		}		
+	line {
+		stroke: #666;
+		}
+	.text {
+		text-align:justify;	
+		width:940px;
+		height:140px;
+		margin: 0 auto;
+		color:#FFF;
+		font-size:14px;
+		line-height:20px;
+		}
+		
+	.text a {
+		color:orange;
+		text-decoration:none;
+		}
+	.text a:hover {
+		color:red;
+		}
+
+    </style>
+  </head>
+  <body>
+ <script type=text/javascript>
 var graph = 'graph.json'
 
 	var w = 960,
@@ -96,3 +146,6 @@ d3.json(graph, function(json) {
         .attr("y2", function(d) { return d.target.y; });
   }
 });
+</script>
+</body>
+</html>
