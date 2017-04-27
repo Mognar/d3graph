@@ -7,7 +7,7 @@
 	
 	body { 
 		padding-top:20px;
-		background:url('http://graus.nu/blog/wp-content/themes/graus2/concrete2.png') fixed;
+		background:url('https://graus.nu/blog/wp-content/themes/graus2/concrete2.png') fixed;
 		font-family:helvetica,arial;
 		text-shadow:#000 0px 1px 1px;
 		}
@@ -57,8 +57,6 @@ var vis = d3.select(".graph")
 	.attr("width", w)
 	.attr("height", h)
 	.attr("pointer-events", "all")
-	.append('svg:g')
-	.call(d3.behavior.zoom().on("zoom", redraw))
 	.append('svg:g');
 
 vis.append('svg:rect')
