@@ -2,7 +2,7 @@
   "directed": true,
   "graph": [],
   "nodes": [
-    {"id":"Administration of justice" "URI": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Lateral_Ventricle"},
+    {"id":"Administration of justice", "URI": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Lateral_Ventricle"},
 {"id":"Adult education"},
 {"id":"Afghanistan"},
 {"id":"Africa"},
