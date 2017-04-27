@@ -17,7 +17,7 @@
 	.graph {
 		margin:0 auto;
 		color:#FFF;
-		fill: #000;
+		fill: #128000;
 		}		
 	line {
 		stroke: #666;
@@ -70,8 +70,8 @@ function redraw() {
 	var force = d3.layout.force()
 		.gravity(.05)
 		.charge(-200)
-		.linkDistance( 60 )
-		.size([w*.75, h*.75]);
+		.linkDistance( 20 )
+		.size([w, h]);
 	
 	var svg = d3.select(".text").append("svg")
 		.attr("width", w)
