@@ -71,7 +71,7 @@ function redraw() {
 		.gravity(.01)
 		.charge(-100)
 		.linkDistance( 60 )
-		.size([w, h]);
+		.size([w*.75, h*.75]);
 	
 	var svg = d3.select(".text").append("svg")
 		.attr("width", w)
