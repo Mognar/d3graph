@@ -116,7 +116,7 @@ d3.json(graph, function(json) {
 				
 			node.append("svg:text")
 				.attr("text-anchor", "middle") 
-				.attr("fill","black")
+				.attr("fill","gray")
 				.style("pointer-events", "none")
 				.attr("font-size", function(d) { if (d.color == '#b94431') { return 10+(d.size*2) + 'px'; } else { return "11px"; } } )
 				.attr("font-weight", function(d) { if (d.color == '#b94431') { return "bold"; } else { return "100"; } } )
