@@ -127,7 +127,7 @@ d3.json(graph, function(json) {
 				.text( function(d) { if (d.color == '#b94431') { return d.id + ' (' + d.size + ')';} else { return d.id;} } ) ;
 				
 			node.append("title")
-				.text(function(d) { return d.URI } );
+				.text(function(d) { return d.id + d.URI } );
 		force
 			.nodes(json.nodes)
 			.links(json.links)
