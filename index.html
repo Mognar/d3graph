@@ -45,7 +45,8 @@
   <body>
 	  <div><h1>Topics Taxonomy Graph</h1></div>
 	  <div><h3>This graph shows the relationships between the topics terms in the Parliamentary thesaurus.<br>
-		  Click on a node to go to the page on parliament.uk for that topic.</h3>
+		  Click on a node to go to the search results returned on search-material.parliament.uk for that topic. <br>
+		  Material indexed with topics terms: Early Day Motions, Research Briefings, POSTnotes and Select Committee Reports</h3>
 	  <div class="graph" align="center"></div>
  <script type=text/javascript>
 var graph = 'graph.json'
@@ -72,7 +73,7 @@ function redraw() {
 	
 	var force = d3.layout.force()
 		.gravity(.05)
-		.charge(-200)
+		.charge(-100)
 		.linkDistance( 30 )
 		.size([w, h]);
 	
