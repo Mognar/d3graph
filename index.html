@@ -55,9 +55,6 @@ var graph = 'graph.json'
 	h = 900,
 	r = 20;
 	 
-var drag = force.drag()
-    .on("dragstart", dragstart);
-
 var vis = d3.select(".graph")
 	.append("svg:svg")
 	.attr("width", w)
@@ -79,6 +76,9 @@ function redraw() {
 		.charge(-150)
 		.linkDistance( 30 )
 		.size([w, h]);
+	 
+	 var drag = force.drag()
+    		.on("dragstart", dragstart);
 	
 	var svg = d3.select(".text").append("svg")
 		.attr("width", w)
