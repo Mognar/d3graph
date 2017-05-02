@@ -98,8 +98,8 @@ d3.json(graph, function(json) {
 			.data(json.nodes)
 			.enter().append("svg:g")
 			.attr("class","node")
-		        .on("dblclick", dblclick)
-			.call(force.drag);
+			.call(force.drag)
+			.on("dragstart", dragstart);
 			
 			node.append("svg:circle")
 				.attr("r", function(d) {
@@ -134,9 +134,6 @@ d3.json(graph, function(json) {
 			.links(json.links)
 			.on("tick", tick)
 			.start();
-	
-	var drag = force.drag()
-    .on("dragstart", dragstart);
 			
   function tick() {
     node.attr("cx", function(d) { return d.x; })
