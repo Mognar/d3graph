@@ -144,6 +144,12 @@ d3.json(graph, function(json) {
         .attr("x2", function(d) { return d.target.x; })
         .attr("y2", function(d) { return d.target.y; });
   }
+	function dblclick(d) {
+  d3.select(this).classed("fixed", d.fixed = false);
+}
+function dragstart(d) {
+  d3.select(this).classed("fixed", d.fixed = true);
+}
 });
 </script>
 </body>
