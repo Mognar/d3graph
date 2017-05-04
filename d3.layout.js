@@ -492,7 +492,7 @@ var d3_layout_forceDragForce,
     d3_layout_forceDragNode;
 
 function d3_layout_forceDragOver(d) {
-  d.fixed |= 2;
+  d.fixed |= 1;
 }
 
 function d3_layout_forceDragOut(d) {
