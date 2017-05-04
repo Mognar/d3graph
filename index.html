@@ -72,8 +72,8 @@ function redraw() {
 	vis.attr("transform","translate(" + d3.event.translate + ")" + " scale(" + d3.event.scale + ")"); }	
 	
 	var force = d3.layout.force()
-		.gravity(.05)
-		.charge(-150)
+		.gravity(.2)
+		.charge(-300)
 		.linkDistance( 30 )
 		.size([w, h]);
 	
