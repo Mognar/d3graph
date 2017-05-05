@@ -496,17 +496,13 @@ function d3_layout_forceDragOver(d) {
 }
 
 function d3_layout_forceDragOut(d) {
-  if (d !== d3_layout_forceDragNode) d.fixed &= 1;
-  ondblclick();
-  d3_layout_forceDragNode.fixed &= 2
+  if (d !== d3_layout_forceDragNode) d.fixed &= 1
 }
 
 function d3_layout_forceDragEnd() {
   d3_layout_forceDrag();
   d3_layout_forceDragNode.fixed &= 1;
-  d3_layout_forceDragForce = d3_layout_forceDragNode = null;
-  ondblclick();
-  d3_layout_forceDragNode.fixed &= 2
+  d3_layout_forceDragForce = d3_layout_forceDragNode = null
 }
 
 function d3_layout_forceDrag() {
