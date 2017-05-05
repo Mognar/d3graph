@@ -475,8 +475,8 @@ d3.layout.force = function() {
         .on("drag", d3_layout_forceDrag)
         .on("dragend", d3_layout_forceDragEnd);
 
-    this.on("mouseover.force", d3_layout_forceDragOver)
-      //.on("mouseout.force", d3_layout_forceDragOut)
+    //this.on("mouseover.force", d3_layout_forceDragOver)
+      this.on("mouseout.force", d3_layout_forceDragOut)
         .call(drag);
   };
 
