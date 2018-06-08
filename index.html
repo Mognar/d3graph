@@ -110,7 +110,15 @@ d3.json(graph, function(json) {
 				.style("stroke", function(d) { if(d.style !== 'filled') { return d.color;}; })
 				.style("stroke-width", "4")
 				.on("click",function(d){window.open(d.URI, '_blank');})
-				.on("mouseover", function(){d3.select(this).style("fill", "#999");})
+				.on("mouseover", function(){
+				path.style('stroke-width', function(l) {
+    					if (d === l.source || d === l.target)
+      						return 4;
+    					else
+      						return 2;
+    					});
+				d3.select(this).style("fill", "#999");
+				})
 				.on("mouseout", function(d) {
 					if (d.style == 'filled') { d3.select(this).style("fill",d.color); }
 					else {
