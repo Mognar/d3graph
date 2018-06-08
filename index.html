@@ -132,7 +132,7 @@ function connectedNodes() {
 			.data(json.nodes)
 			.enter().append("svg:g")
 			.attr("class","node")
-			.call(force.drag);
+			.call(force.drag)
 			.on('dblclick', connectedNodes); //Added code 
 
 			node.append("svg:circle")
