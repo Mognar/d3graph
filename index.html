@@ -111,12 +111,11 @@ d3.json(graph, function(json) {
 				.style("stroke-width", "4")
 				.on("click",function(d){window.open(d.URI, '_blank');})
 				.on("mouseover", function(){
-				path.style('stroke-width', function(l) {
-    					if (d === l.source || d === l.target)
-      						return 4;
-    					else
-      						return 2;
-    					});
+				d3.selectAll(".link")
+  					.filter(function(d) {
+     					return (d.source === this) || (d.target === this);
+   					})
+  				.style("stroke", "red")
 				d3.select(this).style("fill", "#999");
 				})
 				.on("mouseout", function(d) {
